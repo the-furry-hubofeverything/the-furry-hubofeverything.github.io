@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      {% include head.html %}
+      {% if page.css != nil %}
+      <link rel="stylesheet" href="src/css/{{ page.css }}.css">
+      {% endif %}
+   </head>
+   <body class="bg">
+      {% include nav.html %}
+      <div class=""></div>
+      <main class="">
+      {{ content }}
+      </main>
+      {% include footer.html %}
