@@ -11,7 +11,8 @@ quotes = [
     "Pretending to be an Adult",
     "Not IT support",
     "Procrastinating on Artfight",
-    "Overcomplicating projects"
+    "Overcomplicating projects",
+    "Gender: just let me vibe (Any pronoun)"
 ]
 
 window.addEventListener("load", function()
