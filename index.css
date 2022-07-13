@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Ubuntu&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: rgb(16,59,29);
+    background: linear-gradient(180deg, rgb(21, 77, 38) 0%, rgb(11, 30, 8) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+
+    margin: 2rem;
+}
+
+.triangle {
+    z-index: -1;
+    width: 100%;
+    height: 20rem;
+
+    background: 
+        url("img/tree.svg") 0 100% repeat-x,
+        url("img/tree.svg") 10rem 100% repeat-x;
+    background-size: contain;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+img {
+    height: 15rem;
+    border-radius: 50%;
+}
+
+h1, p {
+    color: white;
+    margin: 0.2rem 0px;
+    padding: 0.25em;
+}
+
+h1 {
+
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+div.main, a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text, .buttons {
+    width: 20rem;
+    margin-top: 0.5rem;
+}
+
+.buttons {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.buttons p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #302326;
+    border-radius: 1rem;
+
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: white;
+    padding: 0.4rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
