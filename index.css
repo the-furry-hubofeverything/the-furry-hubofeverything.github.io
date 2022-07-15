@@ -6,15 +6,19 @@ html {
 
 body {
     background: rgb(16,59,29);
-    background: linear-gradient(180deg, rgb(21, 77, 38) 0%, rgb(11, 30, 8) 100%);
+    background: linear-gradient(180deg, #154d26 0%, #0b1e08 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     font-family: "Ubuntu", sans-serif;
     font-size: 1.5em;
     text-align: center;
 
-    margin: 2rem;
+    margin: 2rem 1rem 0 1rem;
 }
 
 .triangle {
@@ -33,11 +37,11 @@ body {
 }
 
 img {
-    height: 15rem;
+    height: 12rem;
     border-radius: 50%;
 }
 
-h1, p {
+h1, h2, h3, h6, p {
     color: white;
     margin: 0.2rem 0px;
     padding: 0.25em;
@@ -54,16 +58,23 @@ p {
     font-size: 1.25rem;
 }
 
-div.main, a {
+
+
+.header, .main, .buttons p a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.text, .buttons {
+.main {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buttons {
     width: 20rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem;
 }
 
 .buttons {
@@ -81,9 +92,20 @@ div.main, a {
     box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-a {
+.buttons p a {
     color: white;
     padding: 0.4rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-decoration: none;
+}
+
+footer {
+    margin: auto 0 0 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+}
+
+footer p {
+    text-align: left;
+    font-size: 0.75rem;
 }
