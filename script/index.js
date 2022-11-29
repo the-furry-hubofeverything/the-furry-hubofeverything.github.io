@@ -12,7 +12,9 @@ quotes = [
     "Not IT support",
     "Procrastinating on Artfight",
     "Overcomplicating projects",
-    "Gender: just let me vibe (Any pronoun)"
+    "Gender: just let me vibe (He/She/They)",
+    "aaaaaaaaaaaaa",
+    "gr"
 ]
 
 window.addEventListener("load", function()
