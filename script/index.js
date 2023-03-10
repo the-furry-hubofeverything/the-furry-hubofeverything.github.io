@@ -7,14 +7,13 @@ quotes = [
     "I'm just a tank weasel.",
     "Pile of anxiety",
     "Slowly turning in to a sparkledog",
-    "👑🐷 Rest in peace Alex",
     "Pretending to be an Adult",
     "Not IT support",
-    "Procrastinating on Artfight",
     "Overcomplicating projects",
-    "Gender: just let me vibe (He/She/They)",
+    "Gender: just let me vibe (They/Them)",
     "aaaaaaaaaaaaa",
-    "gr"
+    "gr",
+    "Fighting inner demons"
 ]
 
 window.addEventListener("load", function()
