@@ -18,5 +18,5 @@ quotes = [
 
 window.addEventListener("load", function()
 {
-  this.document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)]
+  this.document.getElementById("quote").innerText = '"' + quotes[Math.floor(Math.random() * quotes.length)] + '"'
 });
