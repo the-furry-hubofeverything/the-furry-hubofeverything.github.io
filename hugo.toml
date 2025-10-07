@@ -1,0 +1,7 @@
+baseURL = 'https://gulo.dev'
+languageCode = 'en-us'
+title = 'Website of Hubble and Koda!'
+disableKinds = ['taxonomy', 'term']
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

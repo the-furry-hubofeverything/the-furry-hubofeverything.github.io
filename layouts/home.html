@@ -1,0 +1,7 @@
+{{ define "head" }}
+{{ $js := resources.Get "script/index.js" | resources.Minify}}
+<script src="{{ $js.RelPermalink }}"></script>
+{{ end }}
+{{ define "main" }}
+  {{ .Content }}
+{{ end }}

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: rgb(16,59,29);
+    background: rgb(16, 59, 29);
     background: linear-gradient(180deg, #154d26 0%, #0b1e08 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,7 +21,8 @@ body {
     margin: 2rem 1rem 0 1rem;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: "Aleo", sans-serif;
 }
 
@@ -30,9 +31,9 @@ h2, h3 {
     width: 100%;
     height: 20rem;
 
-    background: 
-        url("img/tree.svg") 0 100% repeat-x,
-        url("img/tree.svg") 10rem 100% repeat-x;
+    background:
+        url("/img/tree.svg") 0 100% repeat-x,
+        url("/img/tree.svg") 10rem 100% repeat-x;
     background-size: contain;
 
     position: fixed;
@@ -45,7 +46,11 @@ img {
     border-radius: 50%;
 }
 
-h1, h2, h3, h6, p {
+h1,
+h2,
+h3,
+h6,
+p {
     color: white;
     margin: 0.2rem 0px;
     padding: 0.25em;
@@ -62,40 +67,56 @@ p {
 }
 
 
+.menu.backing p {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
 
-.header, .main, .buttons p a {
+.menu.backing p a {
+    width: 10rem;
+}
+
+.menu.backing {
+    width: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.intro,
+.main,
+.backing p a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.header {
+.intro {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    margin: 2rem;
-    margin-left: auto;
-    margin-right: auto;
     padding: 2ex 1ex;
 }
 
 .main {
+    margin: 5rem 0 0 0;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.buttons {
-    width: 20rem;
+.backing {
+    width: auto;
     margin: 0.5rem;
 }
 
-.buttons {
+.backing {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 1rem;
 }
 
-.buttons p {
+.backing p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: #302326;
@@ -104,20 +125,35 @@ p {
     box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-.buttons p a {
+.backing p a {
     color: white;
+    width: 20rem;
+    margin: auto;
     padding: 0.4rem;
     font-size: 1.1rem;
     text-decoration: none;
 }
 
-footer {
-    margin: auto 0 0 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
+.teethToSkin {
+    top: 20%;
+    right: 10rem;
+    width: 20rem;
+    height: auto;
 }
 
-footer p {
+.footer {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem 0 1rem 1rem;
+    width: 100%;
+}
+
+.footer p {
     text-align: left;
     font-size: 0.75rem;
+    width: 50%;
+    word-break: break-all;
+    white-space: normal;
 }
