@@ -4,12 +4,24 @@ date: 2025-10-05T04:14:54-08:00
 draft: false
 ---
 
-<p class="backing">
-    Hello there! This is a work in progress. Please come again later!
-</p>
+<div id="computerathon">
+    {{< images dir="computerathon/Computerathon_Page*">}}
+        <div style="grid-column: 1; grid-row: 2;"></div>
+</div>
 
-<div class="backing">
+{{< paragraph.inline >}}
+    <div class="backing para">
+        {{ with .Page.Resources.Get "explanation.md" }}
+        {{ .Content }}
+        {{ end }}
+    </div>
+{{< /paragraph.inline >}}
+
+<div class="backing" style="height: fit-content;">
     <!-- Commission status here -->
-    <h3>Commissions are under restructuring</h3>
-    <p style="margin-bottom: 2em; background-color: #3f3839;"><a style="color: grey;" href="">Commission form</a></p>
+    <h3>Commissions are open!</h3>
+    <p style="margin-bottom: 2em;"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc-qHxW-CU6EcUwRFbB_rbITpXDsyqTk-F55o8Cv9Oadg0sSw/viewform?usp=sf_link">Commission
+            form</a>
+    </p>
 </div>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/HubblePFPv4.svg" type="image/x-icon">
     <title>{{ .Title }}</title>
-    {{ $style := resources.Get "css/main.css" | resources.Minify}}
+    {{ $style := resources.Get "css/main.css" | minify }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
     {{ block "head" . }}
     {{ end }}

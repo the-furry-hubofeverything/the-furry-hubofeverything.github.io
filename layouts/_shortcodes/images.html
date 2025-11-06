@@ -1,0 +1,51 @@
+{{/*  TODO make this generalized  */}}
+{{ range resources.Match (.Get "dir") }}
+{{ $alt_txt := strings.Replace .Title "/computerathon/" "/computerathon/alt_txt/" | strings.ReplaceRE ".jpg" ".md" |
+resources.Get }}
+<input onclick="enlarge_image(this)" type="image" src="{{ .RelPermalink }}" alt="{{ $alt_txt.Content }}">
+{{ end }}
+
+
+<script type="text/javascript">
+    // remove backdrop and large image duplicate, and then refocuses original picture
+    // a - original image element
+    let reset_image = function (a) {
+        document.getElementById("enlarge").remove();
+        document.getElementById("backdrop").remove();
+        
+        Array.from(document.body.children).forEach( function (i) {
+            i.removeAttribute("tabindex");
+        });
+        
+        a.focus();
+    };
+
+    // initialize backdrop 
+    var backdrop = document.createElement('div');
+    backdrop.setAttribute("id", "backdrop");
+
+    function enlarge_image(el) {
+        // make a copy of the image for the large one
+        let big_img = el.cloneNode();
+
+        // prevent other parts from focusing
+        Array.from(document.body.children).forEach( function (i) {
+            i.setAttribute("tabindex", "-1");
+        });
+
+        big_img.setAttribute("id", "enlarge");
+        big_img.removeAttribute("onclick");
+        big_img.setAttribute("tabindex", "0");
+
+        // add both elements to the front under body to cover everything else
+        document.body.appendChild(backdrop);
+        document.body.appendChild(big_img);
+
+        // e is to make sure the event is not passed to the listener function, using el instead
+        // add the reset image listeners and then focus on the enlarged image.
+        document.getElementById("backdrop").addEventListener("click", function (e) { reset_image(el) });
+        big_img.addEventListener("click", function (e) { reset_image(el) });
+        big_img.focus();
+
+    };
+</script>

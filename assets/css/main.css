@@ -41,7 +41,7 @@ h3 {
     left: 0px;
 }
 
-img {
+.pfp {
     height: 12rem;
     border-radius: 50%;
 }
@@ -106,17 +106,20 @@ p {
 }
 
 .main {
-    margin: 5rem 0 0 0;
+    margin: 5rem auto 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        margin: 0;
+    }
 }
 
 .backing {
     width: auto;
     margin: 0.5rem;
-}
-
-.backing {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 1rem;
@@ -177,5 +180,67 @@ p {
 @media only screen and (max-width: 600px) {
     .wish {
         height: 20rem;
+    }
+}
+
+#computerathon {
+    display: grid;
+    grid-template-columns: 30em 30em;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+#computerathon input {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+    #computerathon {
+        display: contents;
+        grid-template-columns: 85% 85%;
+    }
+}
+
+#backdrop {
+    background-color: black;
+    opacity: 50%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.para {
+    width: 30rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1200px) {
+    .para {
+        width: 75%;
+    }
+}
+
+.para p {
+    background: none;
+    box-shadow: none;
+}
+
+#enlarge {
+    z-index: 4;
+    position: fixed;
+    display: block;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    #enlarge {
+        width: 95%;
     }
 }

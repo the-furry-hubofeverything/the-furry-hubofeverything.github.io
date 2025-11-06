@@ -1,5 +1,5 @@
 {{ define "head" }}
-{{ $js := resources.Get "script/index.js" | resources.Minify}}
+{{ $js := resources.Get "script/index.js" | minify}}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ end }}
 {{ define "main" }}
